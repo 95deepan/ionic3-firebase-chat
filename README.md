@@ -1,4 +1,4 @@
-# Firebase Chat App with Ionic 3 & AngularFire2 4.0
+# Firebase Chat App with Ionic (v3) & AngularFire2 (4.0.0)
 
 # Content
 * Registration page.
@@ -19,6 +19,6 @@
 
 * That's all about setup, now you can run your app.
 * To run in browser, run "ionic serve" cmd.
-* To run in Android, run "ionic add platform android" & "ionic run android" cmd.
-* To run in iOS, run "ionic add platform ios" & "ionic run ios" cmd.
+* To run in Android, run "ionic platform add android" & "ionic run android" cmd.
+* To run in iOS, run "ionic platform add ios" & "ionic run ios" cmd.
 
