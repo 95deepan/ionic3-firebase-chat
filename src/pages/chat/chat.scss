@@ -1,0 +1,54 @@
+page-chat {
+  .content-md{
+    background-color: #74676A;
+  }
+  .icon{
+    padding-top: 22px;
+    font-size: 30px;
+  }
+  .back-button-md{
+    margin-bottom: 22px;
+  }
+  .bar-button-md:first-child{
+    margin-bottom: 25px;
+  }
+  .inline{
+      display: inline;
+  }
+  .left{
+    text-align: left;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    border-width: 5px;
+    padding: 5px;
+    padding-left: 10px !important; 
+    font-size: 1.6rem;
+    margin-right:110px;
+    color:#74676A;
+  }
+  .right{
+    text-align: left;
+    background-color: #DCF8C6;
+    border-radius: 5px;
+    border-width: 5px;
+    padding: 5px;
+    align-content: flex-end;
+    padding-left: 10px !important;
+    font-size: 1.6rem;
+    margin-left: 110px;
+    color:#74676A;
+  }
+  .text{
+    background-color: #e4e2ef;
+  }
+  .leftTime{
+    margin-left: 125px !important;
+    font-size: 1.2rem;
+  }
+  .rightTime{
+    position: relative;
+    float: right;
+    font-size: 1.2rem;
+    bottom: -5px !important;
+  }
+}
