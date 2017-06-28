@@ -32,7 +32,17 @@ export class ChatList {
          public alertCtrl: AlertController,
           public popoverCtrl: PopoverController
      ) {
-
+         this.wait1 = true;
+         setTimeout(()=>{
+           this.wait1 = false;
+           this.wait2 = true;
+           this.wait3 = false;
+         },2000);
+         setTimeout(()=>{
+           this.wait1 = false;
+           this.wait2 = false;
+           this.wait3 = true;
+         },4000);
   } 
   pop(myEvent){
     let popover = this.popoverCtrl.create("Pop2");
@@ -70,6 +80,7 @@ export class ChatList {
        this.branches = [];
        this.branches = data;
      });
+     debugger;
   }
   logout(){
     this.myAuth.MyAuth.auth.signOut().then(()=>{

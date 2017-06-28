@@ -12,7 +12,7 @@
 <ion-content padding>
   <div *ngIf="!(users | async)" class="wait">
     
-    <div>
+    <div *ngIf="wait1">
       <ion-spinner name="dots"></ion-spinner>
       <div>Loading your favourites...</div>
     </div>
