@@ -12,12 +12,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
 //pages
-import { Login } from '../pages/login/login';
-import { Register } from '../pages/register/register';
-import { Chat } from '../pages/chat/chat';
-import { ChatList } from '../pages/chat-list/chat-list';
-import { Popover } from '../pages/popover/popover';
-import { Pop2 } from '../pages/pop2/pop2';
+// Removed After implementing Lazy Loading
 
 //providers
 import { FireAuth } from '../providers/fire-auth';
@@ -42,13 +37,7 @@ export const firebaseConfig = {
 
 @NgModule({
   declarations: [
-    MyApp,
-    Login,
-    Register,
-    Chat,
-    ChatList,
-    Popover,
-    Pop2
+    MyApp
   ],
   imports: [
     HttpModule,
@@ -61,13 +50,7 @@ export const firebaseConfig = {
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    Login,
-    Register,
-    Chat,
-    ChatList,
-    Popover,
-    Pop2
+    MyApp
   ],
   providers: [
     StatusBar,

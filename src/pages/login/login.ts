@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 import { FireAuth } from '../../providers/fire-auth';
-import { ChatList } from '../chat-list/chat-list';
-import { Register } from '../register/register';
 
 @IonicPage()
 @Component({
@@ -37,7 +35,7 @@ export class Login {
       this.myAuth.MyAuth.authState.subscribe((data)=>{
          if(data.email == email){
            localStorage.setItem('uid',data.uid);
-           this.navCtrl.setRoot(ChatList);
+           this.navCtrl.setRoot("ChatList");
          }
        })
      })
@@ -53,7 +51,7 @@ export class Login {
     });
   }
   register(){
-    this.navCtrl.push(Register);
+    this.navCtrl.push("Register");
   }
   reset(email){
     if(email != undefined){

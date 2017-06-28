@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController,AlertController } from 'ionic-angular';
 import { FireAuth } from '../../providers/fire-auth';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
-import { Login } from '../login/login';
 
 @IonicPage()
 @Component({
@@ -45,7 +44,7 @@ export class Register {
             pass:pass,
             uid:data.uid
           }).then(()=>{
-            this.navCtrl.setRoot(Login);
+            this.navCtrl.setRoot("Login");
           });
          }
        });  

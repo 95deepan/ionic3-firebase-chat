@@ -1,7 +1,6 @@
 import { ViewChild,Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Content, PopoverController,AlertController } from 'ionic-angular';
+import {  IonicPage,NavController, NavParams, Content, PopoverController,AlertController } from 'ionic-angular';
 import { AngularFireDatabase,FirebaseListObservable } from 'angularfire2/database';
-import { Popover } from '../popover/popover';
 
 @IonicPage()
 @Component({
@@ -27,14 +26,14 @@ export class Chat {
           this.chats = this.db.list('chat/'+this.id);
          }
   pop(myEvent){
-     let popover = this.popoverCtrl.create(Popover);
+     let popover = this.popoverCtrl.create("Popover");
       popover.present({
         ev: myEvent
       });
       popover.onDidDismiss((data)=>{
         if(data=='delete'){
         let prompt = this.alertCtrl.create({
-          title:'Delete Permanently',
+          title:"your partner's chat window also becomes empty.",
           buttons:[
           {
             text:'Cancel',
@@ -42,7 +41,7 @@ export class Chat {
               console.log("Cancel clicked");}
           },
           {
-            text:'Delete',
+            text:'Ok Delete',
             handler:data=>{
               this.chats.remove().then(()=>{
               this.navCtrl.pop();

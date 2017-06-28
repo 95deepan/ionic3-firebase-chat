@@ -2,9 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, AlertController,PopoverController } from 'ionic-angular';
 import { FireAuth } from '../../providers/fire-auth';
 import { AngularFireDatabase,FirebaseListObservable } from 'angularfire2/database';
-import { Login } from '../login/login';
-import { Chat } from '../chat/chat';
-import { Pop2 } from '../pop2/pop2';
 
 @IonicPage()
 @Component({
@@ -12,8 +9,6 @@ import { Pop2 } from '../pop2/pop2';
   templateUrl: 'chat-list.html',
 })
 export class ChatList {
-  page1: any = Chat;
-  page2: any = Login;
   
   user1user2:any;
   user2user1:any;
@@ -40,7 +35,7 @@ export class ChatList {
 
   } 
   pop(myEvent){
-    let popover = this.popoverCtrl.create(Pop2);
+    let popover = this.popoverCtrl.create("Pop2");
       popover.present({
         ev: myEvent
       });
@@ -78,7 +73,7 @@ export class ChatList {
   }
   logout(){
     this.myAuth.MyAuth.auth.signOut().then(()=>{
-      this.navCtrl.setRoot(Login);
+      this.navCtrl.setRoot("Login");
       localStorage.removeItem('loggedIn');
       localStorage.removeItem('user');
       localStorage.removeItem('uid');
@@ -103,12 +98,12 @@ export class ChatList {
        for(let i=0;i<this.branches.length;i++){
         if(user1+user2 === this.branches[i].users){
          this.user1user2 = user1+user2;
-         this.navCtrl.push(Chat,{user:name,id:user1+user2});
+         this.navCtrl.push("Chat",{user:name,id:user1+user2});
          break;
         }
         if(user2+user1 === this.branches[i].users){
          this.user2user1 = user2+user1;
-         this.navCtrl.push(Chat,{user:name,id:user2+user1});
+         this.navCtrl.push("Chat",{user:name,id:user2+user1});
          break;
         }
       }
@@ -118,7 +113,7 @@ export class ChatList {
        this.chat.push({
          users:user1+user2
        }).then(()=>{
-         this.navCtrl.push(Chat,{user:name,id:user1+user2});
+         this.navCtrl.push("Chat",{user:name,id:user1+user2});
        }).catch((err)=>{
          console.log(err);
        })

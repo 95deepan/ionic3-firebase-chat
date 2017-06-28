@@ -3,16 +3,13 @@ import { Nav, Platform,MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { Login } from '../pages/login/login';
-import { ChatList } from '../pages/chat-list/chat-list';
-
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any;
+  rootPage: string;
   loggedIn: boolean;
 
  
@@ -24,10 +21,10 @@ export class MyApp {
        public menu:MenuController)
     {
       if(localStorage.getItem('loggedIn') == 'true'){
-        this.rootPage = ChatList;
+        this.rootPage = "ChatList";
       }
       else{
-        this.rootPage = Login;
+        this.rootPage = "Login";
       }
       this.initializeApp();   
   }
