@@ -17,8 +17,13 @@
            storageBucket: "<BUCKET>.appspot.com",
            messagingSenderId: "<SENDER_ID>"
 
+* Don't forget to apply rules and setup SIGN-IN-METHOD in firebase (for more info https://firebase.google.com/docs/database/security/quickstart).
 * That's all about setup, now you can run your app.
 * To run in browser, run "ionic serve" cmd.
-* To run in Android, run "ionic platform add android" & "ionic run android" cmd.
-* To run in iOS, run "ionic platform add ios" & "ionic run ios" cmd.
+* To run in Android, run "ionic cordova platform add android" & "ionic cordova build android --prod" cmd.
+* To run in iOS, run "ionic cordova platform add ios" & "ionic cordova build ios --prod" cmd.
 
+# Not updated Ionic CLI?
+
+* Once you clone this repo and run the cmd "ionic serve", it asks for update to latest ionic cli plugins
+and cordova cli plugins. On that moment, Press 'Y' to update the CLI.
